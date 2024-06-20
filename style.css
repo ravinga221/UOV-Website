@@ -1,0 +1,158 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+body{
+    background-image: url('./images/bg.jpg');
+    width:100%;
+    height:100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+nav{
+    width:100%;
+    height:10vh;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+    position: fixed;
+    color:white;
+    
+}
+.title{
+    width:25%;
+    font-size: 1.2rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.menu{
+    width:30%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+.menu a{
+    width:10%;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.menu a:first-child{
+    color:skyblue;
+}
+
+.animation{
+    font-style: italic;
+    animation:changesize 10s infinite linear;
+    animation-timing-function: ease;
+}
+@keyframes changesize{
+    from{
+        color:aqua;
+    }to{
+        color:orangered;
+    }
+}
+
+/*main content*/
+main{
+    height:100%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:white;
+}
+.content{
+    padding: 20px;
+    width:95%;
+    height: 50%;
+    background-color: rgb(10,10,10);
+    opacity: 0.8;
+    box-shadow: 8px 8px 5px -5px black;
+}
+.content h3{
+    font-size:35px;
+    font-weight: 200;
+    letter-spacing: 3px;
+    text-shadow: 1px 1px 2px blue;
+    text-transform: uppercase;
+}
+.content h1{
+    margin:30px 0 20px 0;
+    font-size: 45px;
+    font-weight: 700;
+    text-shadow: 2px 1px 5px black;
+    text-transform: uppercase;
+}
+.content p{
+    font-size:25px;
+    color:gainsboro;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 1px black;
+}
+.content a{
+    padding: 20px 30px;
+    text-transform: uppercase;
+    font-size:13px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transform: all .5s ease;
+    border-radius: 4px;
+    outline: none;
+}
+.btnone{
+    background-color: #FFF;
+    color:#000;
+}
+.btnone:hover{
+    background-color: #00B894;
+    color:white;
+}
+.btntwo{
+    background-color: #00B894;
+    color:#FFF;
+}
+.btntwo:hover{
+    background-color: #FFF;
+    color:#000;
+}
+
+.change_content::after{
+    content:'';
+    animation: changeText 10s infinite linear;
+}
+@keyframes changeText{
+    0%{
+        content:"Technological Studies";
+        color:lightskyblue;
+    }50%{
+        content:"Business Studies";
+        color:orangered;
+    }100%{
+        content: "Applied Science";
+        color: orange;
+    }
+}
+
+/*footer*/
+footer{
+    bottom:0;
+    position:fixed;
+    background-color: rgba(0,0,0,0.7);
+    width:100%;
+    padding:10px 0;
+    text-align: center;
+}
+footer > p{
+    color:white;
+    font-weight: bold;
+}
